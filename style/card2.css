@@ -1,0 +1,114 @@
+:root {
+    --surface-color: #fff;
+    --curve: 10;
+  }
+
+  *{
+      margin: 0px;
+  }
+  body{
+      padding:16px ;
+      background-color: #FAFAFA;
+       font-family: 'Shippori Antique', sans-serif;;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+  }
+  .card{
+    position: relative;
+    display: block;
+    max-width: 344px;
+    height: auto;
+margin-top: 16px;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(219, 219, 219, .7);
+    box-shadow: 0 3px 15px rgb(150 132 254 / 25%)
+    
+  }
+  .card_image {      
+  width: 100%;
+    object-fit: contain;
+  }
+
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  .card_header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:10px;
+  
+    background-color: var(--surface-color);
+ 
+
+  }
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+
+  .card_thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;      
+    border-radius: 10px;      
+  }
+  .card_title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #374957;
+    font-family: 'Shippori Antique', sans-serif;
+
+    
+  }
+
+  .card__status {
+    font-size: .8em;
+    color: #374957;
+    font-family: 'Shippori Antique', sans-serif;
+  }
+  
+  .card__description {
+   padding-left: 10px;
+   padding-bottom: 10px;
+   padding-right: 10px;
+    margin: 0;
+    color: #374957;
+
+    font-family: 'Shippori Antique', sans-serif;
+
+    text-align: justify;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-clamp: 22;
+    
+  
+  }   
+
+  .card_header-text{
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-aroun;
+      font-family: 'Shippori Antique', sans-serif;
+  }
+  
